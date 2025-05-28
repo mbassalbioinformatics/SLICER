@@ -6,7 +6,7 @@
 
 **A bioinformatics pipeline for analyzing complex engineered DNA constructs from PacBio/ONT long-read sequencing data, specializing in Golden Gate (and similar) assemblies with optional *de novo* reference generation.**
 
-[Link to Publication - *Nature Computational Science* / *Briefings in Bioinformatics* (Coming Soon!)] 
+[Link to Publication - (Coming Soon!)]
 
 [Link to Wiki](https://github.com/mbassalbioinformatics/SLICER/wiki) 
 
