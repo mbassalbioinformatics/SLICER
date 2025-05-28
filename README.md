@@ -1,4 +1,8 @@
+![logo v1](https://github.com/user-attachments/assets/e0e3caf8-5328-470a-bb72-9c7c538cb717)
+
 # SLICER: Sequenced Long-read Identifier of Complex Element Regions
+
+
 
 **A bioinformatics pipeline for analyzing complex engineered DNA constructs from PacBio/ONT long-read sequencing data, specializing in Golden Gate (and similar) assemblies with optional *de novo* reference generation.**
 
@@ -130,3 +134,4 @@ SLICER is licensed under the CC BY-NC 4.0 license. It is free for academic use. 
 
 ### Contact
 For questions, support, or collaborations, please open an issue on the GitHub Issues page or reach out via email.
+
