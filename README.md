@@ -120,6 +120,9 @@ slicer.py <arguments>
 |--slen| [integer] | The read identifiers search length. Recommended value is 20 and above. SLICER will search every read for exact matches of the read identifier sequences (LFS, RFS, and BBS starts or ends) to locate read barcode and core sequence. As these are all based on first found exact matches, too short slen has a risk of unwanted matches (leading to false barcode or coreseq location), and too long has a risk of no matches (considering the high indel probability in PacBio long reads sequencing).
 
 
+_Only by using the config.tsv file can you adjust the barcode and levenshtein distance parameters. See the appropriate wiki page for details._
+
+
 ### Refer to the wiki pages for full details of method, usage etc...
 
 ### License
