@@ -117,3 +117,9 @@ slicer.py <arguments>
 
 
 ### Refer to the wiki pages for full details of method, usage etc...
+
+### License
+SLICER is licensed under the CC BY-NC 4.0 license. It is free for academic use. For commercial use reach out.
+
+### Contact
+For questions, support, or collaborations, please open an issue on the GitHub Issues page or reach out via email.
