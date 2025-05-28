@@ -50,13 +50,14 @@ SLICER addresses these challenges by:
 * BamTools
 * Qualimap
 
-* Its ~strongly~ recommended to just use the installation script with the precompiled yml files.
+
+* Its strongly recommended to just use the installation script with the precompiled yml files.
 
 ### Installation
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/mbassalbioinformatics/slicer.git](https://github.com/mbassalbioinformatics/slicer.git)
+    git clone https://github.com/mbassalbioinformatics/slicer.git
     cd slicer
     ```
 
@@ -73,14 +74,42 @@ Prepare your input files:
 
 **Example `config.tsv`:**
 ```tsv
-input	/path/to/your/pacbio_reads.bam
-outdir	/path/to/output_directory/
-setname	my_experiment
-# mapref	/path/to/your/reference.fasta  (Optional: provide if you have a reference)
-# autoref	slope                          (Default if mapref not provided; or use 'distance')
-thread	8
-config	1                                # Corresponds to Design 1 in Figure 1 of the manuscript
-lfs	GTAATGTGGAAAGGACGAAACACCGCACCG     # Example Left Flanking Sequence
-rfs	GTTTCTTGAAAAAGTGGCACCGAGTCGGTA     # Example Right Flanking Sequence
-bbs	AGGAGCCACCATGGCCCCAAAGAAGAAGCG     # Example Right Backbone Start Sequence
-slen	20                               # Length of anchor sequences to match
+input	      /path/to/your/pacbio_reads.bam
+outdir	      /path/to/output_directory/
+setname	      my_experiment
+# mapref      /path/to/your/reference.fasta      (Optional: provide if you have a reference)
+# autoref     slope                            (Default if mapref not provided; or use 'distance')
+thread	      8
+config	      1                                # Corresponds to Design 1 in Figure 1 of the manuscript
+lfs	      GTAATGTGGAAAGGACGAAACACCGCACCG     # Example Left Flanking Sequence
+rfs	      GTTTCTTGAAAAAGTGGCACCGAGTCGGTA     # Example Right Flanking Sequence
+bbs	      AGGAGCCACCATGGCCCCAAAGAAGAAGCG     # Example Right Backbone Start Sequence
+slen	      20                               # Length of anchor sequences to match
+```
+
+
+To run SLICER, simply...
+```bash
+conda activate slicer
+slicer.py --arglist config.tsv
+```
+
+Alternatively, if you do not have a config.tsv file made, you can specify each input argument to slicer directly. 
+```bash
+conda activate slicer
+slicer.py <arguments>
+```
+|Command|Options|Description|
+|--|--|--|
+|--arglist| [file] | Path to the file containing the list of arguments for the command line. Each argument in this list will be overridden by the correponding flag argument directly provided in the command line. |
+|--input| [file] | Path to the input unaligned BAM or compressed FASTQ file. Accepted extensions are .bam, .ubam, .fq.gz, and .fastq.gz (case insensitive). |
+|--outdir| [directory] | Path to the directory where you want the results to be saved in. |
+|--setname|	[string] | The prefix to label output and intermediate files (no space allowed). |
+|--mapref| [file] | Path to the file containing the reference sequences to which all reads will be aligned. |
+|--autoref| [slope / distance] | The method that will be used for automatic reference generation, which will be activated when mapping reference (mapref) is not provided. Choices are the “slope” and “distance” method. This will be ignored it --mapref is provided, and “slope” method will be chosen as default when --mapref is absent. |
+|--thread| [integer] | Maximum number of processes to use. Default is half the maximum number of available cores in your system. |
+|--config| [1 / 2] | The read configuration of the sequenced long reads construct. Choose 1 if the configuration is in BBS-CoreSeq-LFS-Barcode-RFS order. Choose 2 if the configuration is in LFS-Barcode-RFS-CoreSeq-BBS order. See Figure 1 for more details. |
+|--bbs| [string] | Stands for the BackBone Sequence (Figure 1). Refers to the left BBS in read configuration 1.  Refers to the right BBS in read configuration 2. In read configuration 1, type in the X last bases of the left BBS, where X is equal or more than the given read identifiers search length (slen). In read configuration 2, type in the X first bases of the right BBS, where X is equal or more than the given read identifiers search length (slen). |
+|--lfs| [string] | Stands for the Left Flanking Sequence (Figure 1). In read configuration 1, this must be the full length of the LFS. In read configuration 2, this can be the full length of the LFS, or can just be the X last bases of the LFS, where X is equal or more than the given read identifiers search length (slen). |
+|--rfs| [string] | Stands for the Right Flanking Sequence (Figure 1). In read configuration 1, this can be the full length of the RFS, or can just be the X first bases of the RFS, where X is equal or more than the given read identifiers search length (slen). In read configuration 2, this must be the full length of the RFS. |
+|--slen| [integer] | The read identifiers search length. Recommended value is 20 and above. SLICER will search every read for exact matches of the read identifier sequences (LFS, RFS, and BBS starts or ends) to locate read barcode and core sequence. As these are all based on first found exact matches, too short slen has a risk of unwanted matches (leading to false barcode or coreseq location), and too long has a risk of no matches (considering the high indel probability in PacBio long reads sequencing).
