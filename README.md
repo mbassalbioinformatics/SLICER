@@ -1,4 +1,4 @@
-# SLICER: Sequenced Long-read Identifier, Cutter, Extractor, and Reporter
+# SLICER: Sequenced Long-read Identifier of Complex Element Regions
 
 **A bioinformatics pipeline for analyzing complex engineered DNA constructs from PacBio long-read sequencing data, specializing in Golden Gate assemblies and *de novo* reference generation.**
 
