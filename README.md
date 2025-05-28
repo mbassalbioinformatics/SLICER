@@ -1,6 +1,6 @@
 # SLICER: Sequenced Long-read Identifier of Complex Element Regions
 
-**A bioinformatics pipeline for analyzing complex engineered DNA constructs from PacBio/ONT long-read sequencing data, specializing in Golden Gate assemblies and *de novo* reference generation.**
+**A bioinformatics pipeline for analyzing complex engineered DNA constructs from PacBio/ONT long-read sequencing data, specializing in Golden Gate (and similar) assemblies with optional *de novo* reference generation.**
 
 [Link to Publication - *Nature Computational Science* / *Briefings in Bioinformatics* (Coming Soon!)] [Link to Wiki](https://github.com/your-username/slicer/wiki) [Link to Issues](https://github.com/your-username/slicer/issues) 
 
