@@ -2,8 +2,6 @@
 
 **A bioinformatics pipeline for analyzing complex engineered DNA constructs from PacBio long-read sequencing data, specializing in Golden Gate assemblies and *de novo* reference generation.**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 [Link to Publication - *Nature Computational Science* / *Briefings in Bioinformatics* (Coming Soon!)] [Link to Wiki](https://github.com/your-username/slicer/wiki) [Link to Issues](https://github.com/your-username/slicer/issues) 
 
 ## Overview
