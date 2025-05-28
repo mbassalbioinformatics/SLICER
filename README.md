@@ -22,7 +22,7 @@ SLICER addresses these challenges by:
 * **Comprehensive Analysis & Reporting:** Providing detailed statistics on read processing, filtering, alignment quality, and quantification of constructs.
 
 ![fig1_design_schematic](https://github.com/user-attachments/assets/0ed6cac6-08bb-4761-bde1-4134805533e2)
-## Figure 1: Library design recognised by SLICER.
+## Figure 1: Library designs recognised by SLICER.
 
 
 
