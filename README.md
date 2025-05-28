@@ -114,3 +114,6 @@ slicer.py <arguments>
 |--lfs| [string] | Stands for the Left Flanking Sequence (Figure 1). In read configuration 1, this must be the full length of the LFS. In read configuration 2, this can be the full length of the LFS, or can just be the X last bases of the LFS, where X is equal or more than the given read identifiers search length (slen). |
 |--rfs| [string] | Stands for the Right Flanking Sequence (Figure 1). In read configuration 1, this can be the full length of the RFS, or can just be the X first bases of the RFS, where X is equal or more than the given read identifiers search length (slen). In read configuration 2, this must be the full length of the RFS. |
 |--slen| [integer] | The read identifiers search length. Recommended value is 20 and above. SLICER will search every read for exact matches of the read identifier sequences (LFS, RFS, and BBS starts or ends) to locate read barcode and core sequence. As these are all based on first found exact matches, too short slen has a risk of unwanted matches (leading to false barcode or coreseq location), and too long has a risk of no matches (considering the high indel probability in PacBio long reads sequencing).
+
+
+### Refer to the wiki pages for full details of method, usage etc...
