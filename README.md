@@ -44,14 +44,13 @@ SLICER addresses these challenges by:
 
 ### Main Prerequisites
 
+Its strongly recommended to just use the installation script with the precompiled yml files. But if you really want to know what were installing, here are the main players...
+
 * Python 3.x
 * Minimap2
 * SAMtools
 * BamTools
 * Qualimap
-
-
-* Its strongly recommended to just use the installation script with the precompiled yml files.
 
 ### Installation
 
