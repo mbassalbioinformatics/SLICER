@@ -4,9 +4,9 @@
 
 [Link to Publication - *Nature Computational Science* / *Briefings in Bioinformatics* (Coming Soon!)] 
 
-[Link to Wiki](https://github.com/your-username/slicer/wiki) 
+[Link to Wiki](https://github.com/mbassalbioinformatics/SLICER/wiki) 
 
-[Link to Issues](https://github.com/your-username/slicer/issues) 
+[Link to Issues](https://github.com/mbassalbioinformatics/SLICER/issues)
 
 This work is licensed under the CC BY-NC 4.0 license. It is free for academic use. For commercial use reach out.
 
