@@ -1,4 +1,4 @@
-![logo v1](https://github.com/user-attachments/assets/e0e3caf8-5328-470a-bb72-9c7c538cb717)
+![logo v1](https://github.com/user-attachments/assets/4d699225-9da3-463c-b7fd-13c07fd96d93)
 
 # SLICER: Sequenced Long-read Identifier of Complex Element Regions
 
